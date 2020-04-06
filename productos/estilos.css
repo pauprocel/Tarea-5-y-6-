@@ -1,0 +1,298 @@
+body{
+    background-color: #e5e5e5;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+/***** HEADER *****/
+.header{
+    width: 100%;
+    min-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(131, 58, 214);
+    align-items: center;
+    padding: 15px 0px 15px 0px;
+    
+}
+
+.header button{
+    padding: 10px;
+    border: solid 1px white;
+    background-color: rgb(131, 58, 214);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.header button:hover{
+    background-color: rgb(100, 3, 211);
+}
+
+
+.header h1{
+    color: white;
+    margin-left: 55px;
+}
+
+/*****TERMINA HEADER *****/
+
+/* -*-*-*-*-*-*-*-*-*- */
+
+/****** LISTA DE PRODUCTOS *********/
+
+.listaResultados{
+    width: 100%;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.listaResultados .contenedor{
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 20% 40% 14% 25%;
+    grid-column-gap: 2px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 5px 0px 5px 5px;
+}
+
+.listaResultados .contenedor > div.titulo{
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(131, 58, 214);
+    color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.listaResultados .contenedor > div.claro{
+    font-size: 14px;
+    background-color: #f3f3f3;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.listaResultados .contenedor > div.oscuro{
+    font-size: 14px;
+    background-color: #dadada;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.listaResultados .contenedor > div.precioClaro{
+    font-size: 14px;
+    background-color: #f3f3f3;
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+.listaResultados .contenedor > div.precioOscuro{
+    font-size: 14px;
+    background-color: #dadada;
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+.listaResultados .contenedor > div.errores{
+    grid-column-end: span 4;
+    font-weight: 600;
+    font-size: 14px;
+    color: darkred;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.listaResultados .contenedor > div.sesionAdmin{
+    grid-column-end: span 4;
+    font-size: 14px;
+    color: rgb(131, 58, 214);
+    text-align: right;
+    margin-bottom: 5px;
+    background-color: #e5e5e5;
+    padding: 10px 2px 10px 2px;
+}
+
+
+
+.listaResultados .contenedor > div.subirFoto{
+    grid-column-end: span 4;
+    font-weight: 600;
+    font-size: 14px;
+    color: darkgreen;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.listaResultados .contenedor .fotoChica{
+    width: 50px;
+    margin-right: 5px;
+}
+
+.boton{
+    border: none;
+    color: rgb(131, 58, 214);
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.boton:hover{
+    color:rgb(100, 3, 211);
+    border: none;
+}
+
+/********* ESTILOS SUBIR ARCHIVOS **********/
+
+.contenedorFormulario{
+    width: 100%;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.formulario{
+    width: 800px;
+    background-color: white;
+    padding: 10px;
+    min-height: 400px;
+}
+
+.botonSubirFoto{
+    border: solid 1px rgb(131, 58, 214);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+    color: rgb(131, 58, 214);
+    cursor: pointer;
+    background-color: white;
+}
+
+.botonSubirFoto:hover{
+    background-color: rgb(131, 58, 214);
+    color: white;
+}
+
+
+/*****  VENTANA MODAL  ******/
+
+.modal {
+    display: none;
+  }
+  
+  .modal-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-container {
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    background-color: #fff;
+    border-radius: 10px;
+    min-width: 400px;
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 10px;
+    
+  }
+
+  .modal-container > div.titulo{
+      font-weight: 600;
+      font-size: 24px;
+      color: rgb(131, 58, 214);
+      grid-column-end: span 2;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .modal-container > div.cerrar{
+      grid-column-end: span 2;
+      text-align: right;
+  }
+
+  .modal-container >div.cerrar button{
+    border: none;
+    background-color: transparent;
+    color: rgb(131, 58, 214);
+    font-size:20px;
+    cursor: pointer;
+  }
+
+  .modal-container > div.iconos{
+      margin-bottom: 10px;
+      margin-right: 2px;
+      text-align: center;
+      color: rgb(131, 58, 214);
+      padding-top: 10px;
+  }
+
+  .modal-container > div.campos{
+    margin-bottom: 10px;
+    margin-right: 2px;
+    padding: 10px 0px 0px 5px;
+  }
+
+  .camposModal{
+      width: 340px;
+      border: none;
+      background-color: transparent;
+      border-bottom: solid 1px rgb(250, 116, 54);
+      font-size: 16px;
+  }
+
+  ::placeholder{
+      color: rgb(150, 150, 150);
+  }
+
+  .botonFormularioModal{
+    width:80px;
+    height: 35px;
+    border-radius: 5px;
+    border: solid 1px rgb(250, 116, 54);
+    background-color: white;
+    color:  rgb(250, 116, 54);
+    font-weight: 600;
+    font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+    padding: 0px;
+}
+
+.botonFormularioModal:hover{
+    background-color: rgb(250, 116, 54);
+    color: white;
+}
+
+.mensaje{
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(250, 116, 54);
+}
+
+
+  /******termina ventana modal *******/
+
+
+.mensajeBorrar{
+    font-weight: bold;
+    color: red;
+    margin-bottom: 10px;
+}
